@@ -1,0 +1,7 @@
+flask
+flask-cors
+nltk
+pdfminer.six
+summa
+fuzzywuzzy
+python-Levenshtein

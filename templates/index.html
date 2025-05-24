@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parsit – Resume Parser</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <header>
+        <nav class="nav-bar">
+            <div class="nav-container">
+                <h1 class="logo">Parsit</h1>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="upload-section">
+            <h2>Upload Your Resume</h2>
+            <form id="uploadForm" enctype="multipart/form-data">
+                <label for="resume">Choose a PDF resume:</label>
+                <input type="file" id="resume" name="resume" accept=".pdf" required>
+                <button type="submit">Parse Resume</button>
+            </form>
+            <div id="loading" class="hidden">🔄 Processing your resume...</div>
+        </section>
+
+        <section id="results" class="results-section hidden">
+            <h2>📄 Parsed Resume Details</h2>
+            <div class="result-item"><strong>📞 Phone Number:</strong> <span id="phone_number"></span></div>
+            <div class="result-item"><strong>📧 Emails:</strong> <span id="emails"></span></div>
+            <div class="result-item"><strong>🔗 URLs:</strong> <span id="urls"></span></div>
+            <div class="result-item"><strong>🌐 Hyperlinks:</strong> <span id="hyperlinks"></span></div>
+            <div class="result-item"><strong>🧠 Skills:</strong> <span id="skills"></span></div>
+            <div class="result-item"><strong>🎓 Education:</strong> <span id="education"></span></div>
+            <div class="result-item"><strong>📝 Summary:</strong> <span id="summary"></span></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Parsit – Resume Intelligence</p>
+    </footer>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
